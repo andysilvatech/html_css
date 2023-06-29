@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Uso de Iframes</title>
   <style>
+
     body {
       font-family: Arial, Helvetica, sans-serif;
     }
@@ -29,7 +30,25 @@
 
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam commodi rerum qui animi fugit eum architecto quibusdam dolor modi odit? Quasi nam quo quas maxime illum iusto architecto consectetur perspiciatis, ratione minus debitis magnam ab corporis, tempora error harum fugit. Est vero minus similique minima. Laboriosam quo molestias numquam pariatur cumque, itaque quisquam doloremque? Nulla dolorum repellat praesentium ducimus obcaecati, reiciendis molestias qui molestiae, voluptatum ipsam, deserunt animi nostrum? Incidunt odit, officia tenetur rerum eaque consequatur pariatur, deserunt consectetur quos perferendis modi? Dignissimos cum officiis eius, praesentium voluptatum veniam quis provident qui nisi labore odio iusto voluptates adipisci nemo nulla nobis? Recusandae et iure libero, eos corporis molestiae voluptas pariatur harum quibusdam. Quos fugiat, dignissimos cumque sapiente laudantium rerum sed quibusdam ut ipsum perferendis alias vero officia consequuntur, repudiandae nemo! Fugit harum culpa vero blanditiis, dolorem officia! Dolores, porro quidem eos maxime officia atque ratione placeat. Sunt molestias nisi minima tempora totam dignissimos excepturi et quaerat eligendi assumenda, sed blanditiis iure magnam fugit cumque optio vitae sit, mollitia reprehenderit perspiciatis. Praesentium, dolorum molestiae animi omnis officia expedita soluta vero asperiores.</p>
 
-  <iframe src="" name="frame" frameborder="0">
+  <iframe name="frame" frameborder="0" 
+    srcdoc="
+
+    <div 
+      style='
+        width: 100%;
+        height: 384px;
+        font-size: 2.5em;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        opacity: 20%;
+      '
+    >
+      <h1>Selecione uma opção acima</h1>
+    </div>
+    
+    "
+  >
     <p>Infelizmente seu navegador não suporta este conteúdo :(</p>
   </iframe>
 
