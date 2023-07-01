@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2bafdb
+    }
+
+    p.buttons input {
+      padding: 8px 80px;
+      margin-left: 5px;
+      background-color: #2bafdb;
+      border-radius: 5px;
+      border: 0px;
+      font-weight: bold;
+      color: aliceblue;
+      box-shadow: 0px 3px 5px #00000075;
+    }
+    p.buttons {
+      text-align: end;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Formulário</h1>
+  <form action="cadastro.php" method="POST" autocomplete="on">
+    <p>
+      <label for="icolor">Cor:</label>
+      <input type="color" name="color" id="icolor" value="#2bafdb">
+    </p>
+    <p>
+      <label for="irange">Nível de Satisfação:</label>
+      <input type="range" name="range" id="irange" value="5" min="0" max="10">
+    </p>
+    <p>
+      <label for="iphoto">Foto do perfil:</label>
+      <input type="file" name="photo" id="iphoto">
+    </p>
+    <hr>
+    <p class="buttons">
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </p>
+  </form>
+</body>
+</html>
