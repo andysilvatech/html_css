@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2bafdb
+    }
+    fieldset {
+      border: dashed 2px #2bafdb;
+    }
+
+    fieldset legend {
+      font-size: 1.5em;
+    }
+
+    p.buttons input {
+      padding: 8px 80px;
+      margin-left: 5px;
+      background-color: #2bafdb;
+      border-radius: 5px;
+      border: 0px;
+      font-weight: bold;
+      color: aliceblue;
+      box-shadow: 0px 3px 5px #00000075;
+    }
+    p.buttons {
+      text-align: end;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Formulário</h1>
+  <form action="cadastro.php" method="get" autocomplete="on">
+    <p>
+      <label for="istate">Estado:</label>
+      <select name="state" id="istate">
+        <option value="SP">:: SELECIONE ::</option>
+        <optgroup label="Região Sudeste">
+          <option value="SP">São Paulo</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="MG">Minas Gerais</option>
+        </optgroup>
+        <optgroup label="Região Nordeste">
+          <option value="MA">Maranhão</option>
+          <option value="PE">Pernambuco</option>
+          <option value="RN">Rio Grande do Norte</option>
+        </optgroup>
+      </select>
+    </p>
+    <p>
+      <label for="ijob">Profissão</label>
+      <input type="text" name="job" id="ijob" list="joblist">
+      <datalist id="joblist">
+        <option>Admnistrador</option>
+        <option>Contabilista</option>
+        <option>Desenvolvedor</option>
+        <option>Professor</option>
+      </datalist>
+    </p>
+    <p>
+      <label for="imsg">Mensagem</label><br>
+      <textarea name="msg" id="imsg" cols="50" rows="10" placeholder="Digite sua mensagem aqui ..."></textarea>
+    </p>
+    <hr>
+    <p class="buttons">
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </p>
+  </form>
+</body>
+</html>
