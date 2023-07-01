@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #2bafdb
+    }
+    fieldset {
+      border: dashed 2px #2bafdb;
+    }
+
+    fieldset legend {
+      font-size: 1.5em;
+    }
+
+    hr {
+      border-style: dashed;
+    }
+    p {
+      line-height: 30px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    p.buttons input {
+      padding: 8px 80px;
+      margin-left: 5px;
+      background-color: #2bafdb;
+      border-radius: 5px;
+      border: 0px;
+      font-weight: bold;
+      color: aliceblue;
+      box-shadow: 0px 3px 5px #00000075;
+    }
+    p.buttons {
+      text-align: end;
+    }
+
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Formulário</h1>
+  <form action="cadastro.php" method="get" autocomplete="on" 
+  oninput="inumresult.value=parseInt(inum.value)">
+    <p>
+      <label for="inum">Insira um número:</label>
+      <input type="number" name="num" id="inum" min="0" max="100" value="0" required>
+      <br>
+      <label for="inumresult">Número inserido:</label>
+      <output name="numresult" id="inumresult">0</output>
+    </p>
+    <hr>
+    <p>
+      <label for="in1">Número 1</label>
+      <input type="number" name="n1" id="in1" min="0" max="1000"
+        oninput="isum.innerHTML = Number(in1.value) + Number(in2.value)">
+      <br>
+      <label for="in2">Número 2</label>
+      <input type="number" name="n2" id="in2" min="0" max="1000"
+        oninput="isum.innerHTML = Number(in1.value) + Number(n2.value)">
+      <br>
+      <label for="isum">Soma:</label>
+      <output id="isum">0</output>
+    </p>
+    <hr>
+    <p class="buttons">
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpar">
+    </p>
+  </form>
+</body>
+</html>
