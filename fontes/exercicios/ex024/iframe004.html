@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iframes</title>
+</head>
+<body>
+  <h1>Meu Site Principal</h1>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea facilis saepe earum blanditiis corrupti porro maiores quidem pariatur, laborum, ad consequuntur inventore error quas sapiente amet cupiditate consequatur. Animi, id.</p>
+  <!--
+    Carregando outro site dentro do iframe, que pode acabar capturando informações do meu usuário, que está visitando minha página principal.
+
+    Para poder bloquear ações potencialmente maliciosas dos sites que coloco dentro do iframe, basta adicionar uma configuração chamada 'sandbox', para bloque todo e qqr acesso que outros sites tentem fazer.
+
+    sandbox="sandbox" refererpolicy="no-referrer" - bloqueia tudo
+
+    sandbox="allow-same-origin allow-forms allow-scripts" refererpolicy="no-referrer" - permite execução de scripts e formulários, desde que o conteúdo do iframe esteja no mesmo servidor
+  
+  -->
+  <iframe src="./paginas-extras/pag004.html" refererpolicy="no-referrer" sandbox="allow-same-origin allow-forms allow-scripts">
+    <p>Seu navegador não é compatível com iframes</p>
+  </iframe>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quia aut iste qui natus, rerum eaque provident amet esse excepturi officiis animi nobis, fuga ratione voluptas maxime a reiciendis sint!</p>
+
+</body>
+</html>
